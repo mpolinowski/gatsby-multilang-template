@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/de/sub-page.js"],"names":["Home"],"mappings":"6FAAA,wEAEe,SAASA,IACtB,OAAO","file":"component---src-pages-de-sub-page-js-5f1529df7ed4ec930684.js","sourcesContent":["import React from \"react\"\r\n\r\nexport default function Home() {\r\n  return <div>Hello Germany! Subpage</div>\r\n}\r\n"],"sourceRoot":""}

@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{"KS/D":function(n,e,t){"use strict";t.r(e),t.d(e,"default",(function(){return a}));var u=t("q1tI"),r=t.n(u);function a(){return r.a.createElement("div",null,"Hello Germany! Subpage")}}}]);
+//# sourceMappingURL=component---src-pages-de-sub-page-js-161fd867701d69fda5a1.js.map

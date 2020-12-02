@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{"4vyk":function(n,e,t){"use strict";t.r(e),t.d(e,"default",(function(){return r}));var u=t("q1tI"),o=t.n(u);function r(){return o.a.createElement("div",null,"Hello England!")}}}]);
+//# sourceMappingURL=component---src-pages-en-index-js-b65cafebf97b7b5a45a7.js.map

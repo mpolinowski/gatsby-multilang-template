@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/en/sub-page.js"],"names":["Home"],"mappings":"6FAAA,wEAEe,SAASA,IACtB,OAAO","file":"component---src-pages-en-sub-page-js-2ccbfe3d23abac5ab8ed.js","sourcesContent":["import React from \"react\"\r\n\r\nexport default function Home() {\r\n  return <div>Hello England! Subpage</div>\r\n}\r\n"],"sourceRoot":""}

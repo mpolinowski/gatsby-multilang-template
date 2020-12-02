@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{R2E1:function(n,e,t){"use strict";t.r(e),t.d(e,"default",(function(){return o}));var r=t("q1tI"),u=t.n(r);function o(){return u.a.createElement("div",null,"Hello Germany!")}}}]);
+//# sourceMappingURL=component---src-pages-de-index-js-63ccbf213f44a336331d.js.map

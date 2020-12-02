@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/fr/index.js"],"names":["Home"],"mappings":"2FAAA,wEAEe,SAASA,IACtB,OAAO","file":"component---src-pages-fr-index-js-b86d84334957d0c54eae.js","sourcesContent":["import React from \"react\"\r\n\r\nexport default function Home() {\r\n  return <div>Hello France!</div>\r\n}\r\n"],"sourceRoot":""}

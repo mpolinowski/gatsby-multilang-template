@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/en/index.js"],"names":["Home"],"mappings":"6FAAA,wEAEe,SAASA,IACtB,OAAO","file":"component---src-pages-en-index-js-b65cafebf97b7b5a45a7.js","sourcesContent":["import React from \"react\"\r\n\r\nexport default function Home() {\r\n  return <div>Hello England!</div>\r\n}\r\n"],"sourceRoot":""}
