@@ -1,5 +1,15 @@
 # Multilanguage Page with URL Prefixes
 
+<!-- TOC -->
+
+- [Page Structure](#page-structure)
+- [NGINX Configuration](#nginx-configuration)
+    - [nginx.conf](#nginxconf)
+    - [default.conf](#defaultconf)
+- [Setup with Ansible](#setup-with-ansible)
+
+<!-- /TOC -->
+
 I need to configure NGINX to serve a multilanguage website with URL prefixes like `/en/`, `/fr/` and `/de/`. For this I want to use the default Gatsby Starter to create some static HTML that I can serve to test my NGINX configuration.
 
 
@@ -163,4 +173,54 @@ server {
         root   /usr/share/nginx/html;
     }
 }
+```
+
+
+## Setup with Ansible
+
+```yml
+---
+- hosts: test
+  tasks:
+    - name: Aptitude Update
+      apt: update_cache=yes
+
+    - name: Add NGINX user
+      user:
+        name: nginx
+        comment: NGINX User
+        group: nginx
+        shell: /bin/sh
+        home: /home/nginx
+
+    - name: Installing NGINX
+      apt: pkg=nginx state=present update_cache=no
+
+    - name: Stop NGINX Service
+      service: name=nginx state=stopped 
+        
+    - name: Copy the NGINX Configuration
+      copy:
+        src: "{{ item.src }}"
+        dest: "{{ item.dest }}"
+        mode: "{{item.mode}}"
+      with_items:
+        - { src: '/opt/test-static/nginx/nginx.conf',dest: '/etc/nginx/nginx.conf', mode: '0664'}
+        - { src: '/opt/test-static/nginx/conf.d/',dest: '/etc/nginx/conf.d', mode: '0664'}
+        - { src: '/opt/test-static/nginx/ssl/',dest: '/etc/nginx/ssl', mode: '0664'}
+      notify:
+        - Start NGINX    
+
+  handlers:
+    - name: Start NGINX
+      service: name=nginx state=restarted
+      # notify:
+      #   - Verify that NGINX did not crash
+
+    # - name: Verify that NGINX did not crash
+    #   shell: service nginx status
+    #   register: result
+    #   until: result.stdout.find("active (running)") != -1
+    #   retries: 5
+    #   delay: 5
 ```
